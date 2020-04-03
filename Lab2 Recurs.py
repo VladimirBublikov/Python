@@ -40,7 +40,6 @@ def kvadrat(a, b, M):
             return kvadrat(a - b, b, M) + 1
 
         ##print("{ " + str(a-b) + "; " + str(b) + " }")
-        return kvadrat(a-b, b, M) + 1
     else:
         return 0
 
