@@ -14,9 +14,9 @@ def wrtMtrx(M):
         s = ""
         for j in range(len(M[0])):
             if str(M[i][j]) == "0":
-                s += "   "
+                s += " " * 3
             else:
-                s += str(M[i][j]) + "  "
+                s += str(M[i][j]) + " " * 2
         print(s)
 
 
