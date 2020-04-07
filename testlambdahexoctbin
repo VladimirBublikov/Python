@@ -1,0 +1,38 @@
+from termcolor import colored, cprint
+
+import graphics as gr
+
+M = [1, 2, 3, 4, 5, 6, 7, 8]
+
+
+def NumOnBase(x, base):
+    s = ""
+    B = ["A", "B", "C", "D", "E", "F"]
+    while x > 0:
+        dig = x % base
+       # print(lambda: dig if dig<10 else B[dig%10].strip())
+        if dig>9:
+            s += B[dig%10]
+        else:
+            s += str(dig)
+        x //= base
+    return s[::-1]
+
+
+# исключение ошибки
+# try:
+#     print(sum(M) / 0)
+# except Exception as Err:
+#     print("\033[31m {}\033[0m".format(Err))  # \033[4m\033[37m\033[44m{}\033[0m
+#     cprint(str(Err.__class__),"blue")
+#     cprint(str(Err.__class__).split("'")[1],"green")
+#     cprint("ERROR", "blue", "on_red")
+#     raise SystemExit(99)
+#
+print("vovik")
+
+x =88888
+print(bin(x) + "; " + NumOnBase(x, 2))
+print(oct(x) + "; " + NumOnBase(x, 8))
+print(hex(x) + "; " + NumOnBase(x, 16))
+
