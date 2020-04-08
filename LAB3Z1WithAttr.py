@@ -74,7 +74,7 @@ a.append(AirLine(5001, PointsDest[3], 3, [1,0,0,0,1]))
 a[len(a)-1].setWeekDays([1,1,0,0,0,0,1])
 
 print("Текущие рейсы: ", "\n".join([str(lst) for lst in a]), sep="\n")
-
+# или вот так print("Текущие рейсы: ", *a, sep="\n")
 
 wd = int(input("Введи день недели: "))
 pn = input("Пункт назначения: ")
