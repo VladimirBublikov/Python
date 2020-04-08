@@ -3,11 +3,11 @@ class AirLine:
     __Week_Days_Enum = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]
 
     def __init__(self, Race_Number: int=0, DestPoint: str="None", AirPlaneType: int=0, WeekDays=[]):
-        # Инициализация класса через готовые методы  Set для отслеживания исключений
-        self.Race_Number = Race_Number  # не будем инкапсулировать номер рейса
+        # Инициализация класса 
+        self.Race_Number = Race_Number  
         self.Dest_Point = DestPoint
         self.Airplane_Type = AirPlaneType
-        self.__Week_Days = WeekDays
+        self.__Week_Days = WeekDays     # спрячем, воспользуемся инкапсуляцией
         print("Рейс #%s добавлен в список." % self.Race_Number)
 
     def __str__(self):
