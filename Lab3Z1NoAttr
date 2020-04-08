@@ -1,4 +1,3 @@
-
 class AirLine:
     __Airplane_Type_Enum = ["None", "Airbus А320", "AirbusSSJ-100", "Boeing B787"]
     __Week_Days_Enum = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]
