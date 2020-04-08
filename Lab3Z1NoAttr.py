@@ -36,8 +36,10 @@ class AirLine:
 
     # Тип самолета (set/get)
     def setAirplaneType(self, AirPlaneType: int=0):
-        self.__Airplane_Type = self.__Airplane_Type_Enum[AirPlaneType] if AirPlaneType>-1 and AirPlaneType < 4 else self.__Airplane_Type
-        return self.__Airplane_Type
+        if - 1 < AirPlaneType < 4:
+            self.__Airplane_Type = self.__Airplane_Type_Enum[AirPlaneType]
+            return self.__Airplane_Type
+        return self.__Airplane_Type_Enum[0]
 
     def getAirplaneType(self):
         return self.__Airplane_Type
@@ -65,9 +67,6 @@ class AirLine:
     # Есть ли вылет в определенный день
     def isOnWeekDay(self, WeekDay):
         return self.__Week_Days[WeekDay-1]
-
-
-
 
 
 PointsDest = ["New York", "Madrid", "Minsk", "Moscow", "Los Angeles"]
