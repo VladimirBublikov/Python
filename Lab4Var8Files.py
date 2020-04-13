@@ -15,8 +15,7 @@ maxi = 0
 maxs = 0
 for i in range(len(textlist)):
     if maxs < glasniecount(textlist[i]):
-        maxs = glasniecount(textlist[i])
-        maxi = i
+        maxs, maxi = glasniecount(textlist[i]), i
 
 # убираем из списка эту строку
 textlist.pop(maxi)
